@@ -36,6 +36,6 @@
         <a href="disciplina.jsp">Disciplinas</a>
         <h2>Isabela Pereira Melim</h2>
         <h2>RA: 1290481913020</h2>
-        <h2>Disciplinas cursadas: </h2>
+        <h2>Disciplinas cursadas: <%= Disciplina.getList(disciplinaList).size() %></h2>
     </body>
 </html>

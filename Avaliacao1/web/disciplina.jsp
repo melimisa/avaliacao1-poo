@@ -55,7 +55,7 @@
                         <td> <%= disciplina.getCiclo()  %> </td>
                         <td> <%= disciplina.getNota()  %> </td>
                         <td>
-                            <form>
+                            <form method="post">
                                 <input type="number" name="nota">
                                 <input type="submit" name="altera" value="Alterar">
                                 <input type="hidden" name="i" value="<%=i%>">
