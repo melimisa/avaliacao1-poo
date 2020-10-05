@@ -9,13 +9,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>P1 - Início</title>
+        <title>P1 - Sobre</title>
     </head>
     <body>
-        <h1>Início</h1>
-        <a href="sobre.jsp">Sobre</a>
+        <h1>Sobre</h1>
         <h2>Isabela Pereira Melim</h2>
         <h2>RA: 1290481913020</h2>
-        <h2>Disciplinas cursadas: </h2>
+        <h2><a href="https://github.com/melimisa/avaliacao1-poo" target="_blank">Repositório da avaliação</a> </h2>
     </body>
 </html>
