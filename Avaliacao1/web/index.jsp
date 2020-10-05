@@ -7,6 +7,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="avaliacao1.Disciplina" %>
+<%@include file="WEB-INF/menu.jspf" %>
 <!DOCTYPE html>
 <%
     ArrayList<Disciplina> disciplinaList = (ArrayList) application.getAttribute("disciplinaList");
