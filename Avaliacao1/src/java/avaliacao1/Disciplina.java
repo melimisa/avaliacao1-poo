@@ -56,7 +56,7 @@ public class Disciplina {
         this.nota = nota;
     }
     
-    public static ArrayList<Disciplina> gotList(ArrayList<Disciplina> disciplina){
+    public static ArrayList<Disciplina> getList(ArrayList<Disciplina> disciplina){
         ArrayList<Disciplina> minhasDisciplinas = disciplina;
         return minhasDisciplinas;
     }
