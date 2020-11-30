@@ -276,6 +276,27 @@ public class Disciplina {
             try{con.close();}catch(Exception ex2){}          
         }
     }
+
+    public static void  delete(int id) throws Exception{
+        Connection con = null;
+        Statement stmt = null;
+        ResultSet rs = null;
+        try{
+             Class.forName(DRIVER_CLASS);
+               con = getConnection();
+                stmt = con.createStatement();
+        stmt.execute("DELETE FROM disciplinas WHERE nome='"+id+"'");
+        
+        stmt.close();
+        con.close();
+        }catch(Exception ex){
+            e = ex;
+            try{rs.close();}catch(Exception ex2){}
+            try{stmt.close();}catch(Exception ex2){}
+            try{con.close();}catch(Exception ex2){}          
+        }
+    }
+    
         
     
 }
