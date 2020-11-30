@@ -9,23 +9,7 @@
 <%@page import="avaliacao1.Disciplina" %>
 <%@include file="WEB-INF/menu.jspf" %>
 <%
-    ArrayList<Disciplina> disciplinaList = (ArrayList)application.getAttribute("disciplinaList");
-    try{
-        if(request.getParameter("altera") != null){
-        int i = Integer.parseInt(request.getParameter("i"));
-        double nota = Double.parseDouble(request.getParameter("nota"));
-        if(nota >= 0 && nota <= 10){
-            disciplinaList.get(i).setNota(nota);
-            response.sendRedirect(request.getRequestURI());
-        }
-        else{
-            out.print("<script> alert('Nota inválida')</script>");
-        }
-    }
-    }catch(Exception e){
-        
-    }
-    
+
     
  %>
 <!DOCTYPE html>
@@ -36,7 +20,7 @@
     </head>
     <body>
         <h1> Disciplinas</h1>
-        <table border="1">
+        <table border='1'>
             <tr>
                 <th>Índice</th>
                 <th>Nome</th>
@@ -46,10 +30,9 @@
                 <th colspan="2">Alterar Nota</th>
             </tr>
             
-            <%for(int i = 0; i < Disciplina.getList(disciplinaList).size(); i++){%>
-                    <% Disciplina disciplina = Disciplina.getList(disciplinaList).get(i); %>
+            <%for( Disciplina disciplina: Disciplina.getList()){%>
                     <tr>
-                        <td> <%=i%> </td>
+                        <td> <%= disciplina.getId() %> </td>
                         <td> <%= disciplina.getNome() %> </td>
                         <td> <%= disciplina.getEmenta()  %> </td>
                         <td> <%= disciplina.getCiclo()  %> </td>
@@ -58,13 +41,13 @@
                             <form method="post">
                                 <input type="number" name="nota">
                                 <input type="submit" name="altera" value="Alterar">
-                                <input type="hidden" name="i" value="<%=i%>">
+                                <input type="hidden" name="i" value="<%= disciplina.getId() %>">
                             </form>
                         </td>
                     </tr>
                     
             <% } %>
-            
-        </table>
+        </table>    
+        
     </body>
 </html>
